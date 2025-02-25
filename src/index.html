@@ -13,24 +13,14 @@ eleventyNavigation:
 
 {% block head %}
     <link rel="stylesheet" href="/assets/css/local.css" />
-    <link rel="stylesheet" href="/assets/css/critical.css" />
-
-    <!-- Script for Netlify Identity -->
-    <script
-        defer
-        src="https://identity.netlify.com/v1/netlify-identity-widget.js"
-    ></script>
-    <script defer>
-        if (window.netlifyIdentity) {
-            window.netlifyIdentity.on("init", (user) => {
-                if (!user) {
-                    window.netlifyIdentity.on("login", () => {
-                        document.location.href = "/admin/";
-                    });
-                }
-            });
-        }
-    </script>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet"
+    />
 
     <!-- JSON Schema Markup -->
     <!-- prettier-ignore-start -->
@@ -74,570 +64,469 @@ eleventyNavigation:
 {% endblock %}
 
 {% block body %}
-    <!-- ============================================ -->
-    <!--                    Hero                      -->
-    <!-- ============================================ -->
-
-    <section id="hero">
-        <div class="cs-container">
-            <div class="cs-flex-group">
-                <span class="cs-topper">mountain hiking society</span>
-                <h1 class="cs-title">Explore the World with Exciting People</h1>
-                <p class="cs-text">
-                    Tincidunt lobortis feugiat vivamus at augue eget arcu dictum
-                    varius. Nibh tortor id aliquet lectus proin nibh
-                    condimentum.
-                </p>
-                <a href="/about" class="cs-button-solid">Explore More</a>
-                <a href="/contact" class="cs-button-transparent">
-                    <img
-                        class="cs-img"
-                        loading="lazy"
-                        decoding="async"
-                        src="https://csimg.nyc3.digitaloceanspaces.com/Hero/play.svg"
-                        alt="play icon"
-                        width="17"
-                        height="17"
-                    />
-                    Get in Touch
-                </a>
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#cakes">Cakes</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="hero-content">
+            <h1 class="logo">The Crooked Spoon Bakery</h1>
+            <p class="tagline">Handcrafted Happiness in Every Bite</p>
+            <div class="cta-container">
+                <a href="#order" class="cta-btn cta-primary">Order Online</a>
+                <a href="#menu" class="cta-btn cta-secondary">See Our Menu</a>
             </div>
-        </div>
-
-        <!-- Background Image -->
-        <picture class="cs-picture">
-            <source
-                media="(max-width: 600px)"
-                srcset="/assets/images/landing-m.webp"
-            />
-            <source
-                media="(min-width: 601px)"
-                srcset="/assets/images/landing.jpg"
-            />
-            <img
-                aria-hidden="true"
-                decoding="async"
-                src="/assets/images/landing.jpg"
-                alt="new home"
-                width="2500"
-                height="1667"
-                loading="eager"
-            />
-        </picture>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                  Services                    -->
-    <!-- ============================================ -->
-
-    <section id="services" class="services">
-        <!-- Get Icons From flaticon.com -->
-        <div class="card">
-            <picture>
-                <img
-                    aria-hidden="true"
-                    decoding="async"
-                    src="/assets/svgs/service1.svg"
-                    alt="appliance"
-                    width="48"
-                    height="48"
-                />
-            </picture>
-            <h2>Service 1</h2>
-            <p>
-                Talk about the service with keywords people will be searching
-                for it by. Keep it 1-2 sentences.
-            </p>
-        </div>
-        <div class="card">
-            <picture>
-                <img
-                    aria-hidden="true"
-                    decoding="async"
-                    src="/assets/svgs/service2.svg"
-                    alt="appliance"
-                    width="48"
-                    height="48"
-                />
-            </picture>
-            <h2>Service 2</h2>
-            <p>
-                Talk about the service with keywords people will be searching
-                for it by. Keep it 1-2 sentences.
-            </p>
-        </div>
-        <div class="card">
-            <picture>
-                <img
-                    aria-hidden="true"
-                    decoding="async"
-                    src="/assets/svgs/service3.svg"
-                    alt="appliance"
-                    width="48"
-                    height="48"
-                />
-            </picture>
-            <h2>Service 3</h2>
-            <p>
-                Talk about the service with keywords people will be searching
-                for it by. Keep it 1-2 sentences.
-            </p>
+            <div class="location">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path
+                        d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                    ></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                Oakhaven, Vermont
+            </div>
         </div>
     </section>
 
-    <!-- ============================================ -->
-    <!--                 Side By Side                 -->
-    <!-- ============================================ -->
+    <!-- Featured Products Section -->
+    <section class="featured-products">
+        <div class="container">
+            <h2 class="section-title">Our Specialties</h2>
+            <p class="section-description">
+                Discover our handcrafted delights, made fresh daily with local
+                ingredients
+            </p>
 
-    <section id="sbs">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-left">
-                <picture class="cs-picture cs-picture1">
-                    <source
-                        media="(max-width: 600px)"
-                        srcset="/assets/images/cabinets2-m.jpg"
-                    />
-                    <source
-                        media="(min-width: 601px)"
-                        srcset="/assets/images/cabinets2.jpg"
-                    />
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
                     <img
-                        aria-hidden="true"
-                        decoding="async"
-                        src="/assets/images/cabinets2.jpg"
-                        alt="cabinets"
-                        loading="lazy"
-                        width="400"
-                        height="563"
+                        src="https://picsum.photos/id/431/400/300"
+                        alt="Artisan Sourdough Bread"
+                        class="product-image"
                     />
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <source
-                        media="(max-width: 600px)"
-                        srcset="/assets/images/construction-m.jpg"
-                    />
-                    <source
-                        media="(min-width: 601px)"
-                        srcset="/assets/images/construction.jpg"
-                    />
-                    <img
-                        aria-hidden="true"
-                        decoding="async"
-                        src="/assets/images/construction.jpg"
-                        alt="house"
-                        loading="lazy"
-                        width="400"
-                        height="563"
-                    />
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-right">
-                <span class="cs-topper">About Us</span>
-                <h2 class="cs-title">About Company Title</h2>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent
-                    Class officelan nonatoureanor mauris laoreet, iaculis libero
-                    quis. Curabitur et tempus eri consequat tincidunt turpis sit
-                    amet imperdiet. Praesent nonatourean olei aptent taciti
-                    sociosqu ad litora torquent per.
-                </p>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent
-                    Class officelan nonatoureanor mauris laoreet, iaculis libero
-                    quis. Curabitur et tempus eri consequat tincidunt turpis sit
-                    amet imperdiet. Praesent nonatourean olei aptent taciti
-                    sociosqu ad litora torquent per.
-                </p>
-                <div class="cs-flex-group">
-                    <p class="cs-flex-p">
-                        In consequat tincidunt turpis sit amet imperdiet.
-                        Praesent Classei consequat tincidunt turpis sit amet
-                        imperdiet for mind.
+                    <h3 class="product-title">Artisan Sourdough</h3>
+                    <p class="product-description">
+                        Crusty exterior, soft interior, with a complex flavor
+                        profile
                     </p>
-                    <span class="cs-name">Justin Time</span>
-                    <span class="cs-job">CEO-Founder</span>
-                    <img
-                        class="cs-quote-icon"
-                        loading="lazy"
-                        decoding="async"
-                        src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg"
-                        alt="gavel"
-                        width="136"
-                        height="77"
-                    />
+                    <a href="#order" class="order-btn">Order Now</a>
                 </div>
-                <a href="/about" class="cs-button-solid">More About Us</a>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <img
+                        src="https://picsum.photos/id/292/400/300"
+                        alt="Flaky Croissants"
+                        class="product-image"
+                    />
+                    <h3 class="product-title">Flaky Croissants</h3>
+                    <p class="product-description">
+                        Buttery layers of perfection, baked to golden brown
+                    </p>
+                    <a href="#order" class="order-btn">Order Now</a>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <img
+                        src="https://picsum.photos/id/291/400/300"
+                        alt="Custom Buttercream Flower Cake"
+                        class="product-image"
+                    />
+                    <h3 class="product-title">Flower Cakes</h3>
+                    <p class="product-description">
+                        Stunning buttercream floral designs for special
+                        occasions
+                    </p>
+                    <a href="#order" class="order-btn">Order Now</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ============================================ -->
-    <!--            Extra Content To Rank             -->
-    <!-- ============================================ -->
-
-    <section id="sbs-r">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-left">
-                <picture class="cs-picture cs-picture1">
-                    <source
-                        media="(max-width: 600px)"
-                        srcset="/assets/images/construction-m.jpg"
-                    />
-                    <source
-                        media="(min-width: 601px)"
-                        srcset="/assets/images/construction.jpg"
-                    />
-                    <img
-                        aria-hidden="true"
-                        decoding="async"
-                        src="/assets/images/construction.jpg"
-                        alt="house"
-                        loading="lazy"
-                        width="400"
-                        height="560"
-                    />
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <source
-                        media="(max-width: 600px)"
-                        srcset="/assets/images/cabinets2-m.jpg"
-                    />
-                    <source
-                        media="(min-width: 601px)"
-                        srcset="/assets/images/cabinets2.jpg"
-                    />
-                    <img
-                        aria-hidden="true"
-                        decoding="async"
-                        src="/assets/images/cabinets2.jpg"
-                        alt="cabinets"
-                        loading="lazy"
-                        width="400"
-                        height="560"
-                    />
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-right">
-                <span class="cs-topper">SEO Ranking</span>
-                <h2 class="cs-title">Talk about a main service keyword</h2>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent
-                    Class officelan nonatoureanor mauris laoreet, iaculis libero
-                    quis. Curabitur et tempus eri consequat tincidunt turpis sit
-                    amet imperdiet. Praesent nonatourean olei aptent taciti
-                    sociosqu ad litora torquent per.
-                </p>
-                <p class="cs-text">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Non tenetur, iure nihil ipsam qui atque commodi id
-                    voluptatem nesciunt, quis animi fuga cum doloribus! Eaque
-                    laboriosam, unde consectetur iure asperiores ullam.
-                    Consequuntur debitis a voluptatibus vitae optio autem
-                    explicabo quia neque est quas, in placeat. Lorem ipsum dolor
-                    sit amet consectetur adipisicing elit. Doloribus modi
-                    laudantium voluptatibus rem libero error minus quia eligendi
-                    sapiente eos.
-                </p>
-                <a href="/blog" class="cs-button-solid">Read our Blog</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                   Gallery                    -->
-    <!-- ============================================ -->
-
-    <section id="gallery">
-        <div class="cs-container">
-            <span class="cs-topper">Our Portfolio</span>
-            <h2 class="cs-title">
-                Et orci volutpat, back up generator installations
-            </h2>
-            <div class="cs-image-group">
-                <!-- Row 1-->
-                <div class="cs-row cs-row-1">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    <picture class="cs-picture cs-picture1">
-                        <source
-                            media="(max-width: 600px)"
-                            srcset="/assets/images/portfolio/port1-m.jpg"
-                        />
-                        <source
-                            media="(min-width: 601px)"
-                            srcset="/assets/images/portfolio/port1.jpg"
-                        />
-                        <img
-                            aria-hidden="true"
-                            decoding="async"
-                            src="/assets/images/portfolio/port1.jpg"
-                            alt="new hallway"
-                            loading="lazy"
-                            width="400"
-                            height="560"
-                        />
-                    </picture>
-                    <picture class="cs-picture cs-picture2">
-                        <source
-                            media="(max-width: 600px)"
-                            srcset="/assets/images/portfolio/port4-m.jpg"
-                        />
-                        <source
-                            media="(min-width: 601px)"
-                            srcset="/assets/images/portfolio/port4.jpg"
-                        />
-                        <img
-                            aria-hidden="true"
-                            decoding="async"
-                            src="/assets/images/portfolio/port4.jpg"
-                            alt="new home construction"
-                            loading="lazy"
-                            width="400"
-                            height="560"
-                        />
-                    </picture>
-                    <picture class="cs-picture cs-picture3">
-                        <source
-                            media="(max-width: 600px)"
-                            srcset="/assets/images/portfolio/port7-m.jpg"
-                        />
-                        <source
-                            media="(min-width: 601px)"
-                            srcset="/assets/images/portfolio/port7.jpg"
-                        />
-                        <img
-                            aria-hidden="true"
-                            decoding="async"
-                            src="/assets/images/portfolio/port7.jpg"
-                            alt="building a new wall"
-                            loading="lazy"
-                            width="400"
-                            height="560"
-                        />
-                    </picture>
-                </div>
-                <!-- Row 2 -->
-                <div class="cs-row cs-row-2">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    <picture class="cs-picture cs-picture1">
-                        <source
-                            media="(max-width: 600px)"
-                            srcset="/assets/images/portfolio/port2-m.jpg"
-                        />
-                        <source
-                            media="(min-width: 601px)"
-                            srcset="/assets/images/portfolio/port2.jpg"
-                        />
-                        <img
-                            aria-hidden="true"
-                            decoding="async"
-                            src="/assets/images/portfolio/port2.jpg"
-                            alt="new kitchen"
-                            loading="lazy"
-                            width="400"
-                            height="560"
-                        />
-                    </picture>
-                    <picture class="cs-picture cs-picture2">
-                        <source
-                            media="(max-width: 600px)"
-                            srcset="/assets/images/portfolio/port5-m.jpg"
-                        />
-                        <source
-                            media="(min-width: 601px)"
-                            srcset="/assets/images/portfolio/port5.jpg"
-                        />
-                        <img
-                            aria-hidden="true"
-                            decoding="async"
-                            src="/assets/images/portfolio/port5.jpg"
-                            alt="apartment addition"
-                            loading="lazy"
-                            width="400"
-                            height="560"
-                        />
-                    </picture>
-                    <picture class="cs-picture cs-picture3">
-                        <source
-                            media="(max-width: 600px)"
-                            srcset="/assets/images/portfolio/port8-m.jpg"
-                        />
-                        <source
-                            media="(min-width: 601px)"
-                            srcset="/assets/images/portfolio/port8.jpg"
-                        />
-                        <img
-                            aria-hidden="true"
-                            decoding="async"
-                            src="/assets/images/portfolio/port8.jpg"
-                            alt="kew kitchen cabinets"
-                            loading="lazy"
-                            width="400"
-                            height="560"
-                        />
-                    </picture>
-                </div>
-                <!-- Row 3 -->
-                <div class="cs-row cs-row-3">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    <picture class="cs-picture cs-picture1">
-                        <source
-                            media="(max-width: 600px)"
-                            srcset="/assets/images/portfolio/port3-m.jpg"
-                        />
-                        <source
-                            media="(min-width: 601px)"
-                            srcset="/assets/images/portfolio/port3.jpg"
-                        />
-                        <img
-                            aria-hidden="true"
-                            decoding="async"
-                            src="/assets/images/portfolio/port3.jpg"
-                            alt="new kitchen"
-                            loading="lazy"
-                            width="400"
-                            height="560"
-                        />
-                    </picture>
-                    <picture class="cs-picture cs-picture2">
-                        <source
-                            media="(max-width: 600px)"
-                            srcset="/assets/images/portfolio/port6-m.jpg"
-                        />
-                        <source
-                            media="(min-width: 601px)"
-                            srcset="/assets/images/portfolio/port6.jpg"
-                        />
-                        <img
-                            aria-hidden="true"
-                            decoding="async"
-                            src="/assets/images/portfolio/port6.jpg"
-                            alt="apartment addition"
-                            loading="lazy"
-                            width="400"
-                            height="560"
-                        />
-                    </picture>
-                    <picture class="cs-picture cs-picture3">
-                        <source
-                            media="(max-width: 600px)"
-                            srcset="/assets/images/portfolio/port9-m.jpg"
-                        />
-                        <source
-                            media="(min-width: 601px)"
-                            srcset="/assets/images/portfolio/port9.jpg"
-                        />
-                        <img
-                            aria-hidden="true"
-                            decoding="async"
-                            src="/assets/images/portfolio/port9.jpg"
-                            alt="kew kitchen cabinets"
-                            loading="lazy"
-                            width="400"
-                            height="560"
-                        />
-                    </picture>
-                </div>
-            </div>
-            <a href="/projects" class="cs-button-solid">View Full Gallery</a>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                   Reviews                    -->
-    <!-- ============================================ -->
-
-    <section id="reviews">
-        <div class="cs-container">
-            <span class="cs-topper">Our Reviews</span>
-            <h2 class="cs-title">Words From Our Customers</h2>
-            <p class="cs-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
-                dolor volutpat porttitor sagittis nunc nisl. Sagittis sit
-                pellentesque gravida viverra. Leo ut sed euismod tortor risus
-                et. Ornare non neque, leo, ornare. Lorem ipsum dolor sit amet.
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2 class="section-title">Our Delicious Menu</h2>
+            <p class="section-description">
+                Explore our wide range of breads, pastries, cakes, and more. All
+                made with love and the finest ingredients.
             </p>
-            <ul class="cs-card-group">
-                <!-- Review 1 -->
-                <li class="cs-item">
+
+            <div class="menu-categories">
+                <button class="menu-category-btn active" data-category="all">
+                    All Items
+                </button>
+                <button class="menu-category-btn" data-category="breads">
+                    Breads
+                </button>
+                <button class="menu-category-btn" data-category="pastries">
+                    Pastries
+                </button>
+                <button class="menu-category-btn" data-category="cakes">
+                    Cakes
+                </button>
+                <button class="menu-category-btn" data-category="cookies">
+                    Cookies
+                </button>
+            </div>
+
+            <div class="menu-grid">
+                <!-- Menu Item 1 -->
+                <div class="menu-item" data-category="breads">
                     <img
-                        class="cs-item-img"
-                        aria-hidden="true"
-                        loading="lazy"
-                        decoding="async"
-                        src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile5.png"
-                        alt="profile picture"
-                        width="80"
-                        height="80"
+                        src="https://picsum.photos/id/237/400/300"
+                        alt="Sourdough Bread"
+                        class="menu-item-image"
                     />
-                    <p class="cs-item-p">
-                        Dictum dolor, nullam morbi sem in auctor proin.
-                        Consequat dolor habitasse nam sed tempor. Viverra magna
-                        pharetra rhoncus, nec sed ullamcorper lectus et. Auctor
-                        velit diam fermentum consequat. Feugiat viverra massa
-                        urna, volutpat orci imperdiet eget eget.
-                    </p>
-                    <span class="cs-reviewer">
-                        Jon Doe
-                        <span class="cs-desc">Homeowner</span>
-                    </span>
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Classic Sourdough</h3>
+                        <p class="menu-item-description">
+                            Our signature sourdough, perfect for any meal.
+                        </p>
+                        <p class="menu-item-price">$6.00</p>
+                    </div>
+                </div>
+
+                <!-- Menu Item 2 -->
+                <div class="menu-item" data-category="pastries">
                     <img
-                        class="cs-item-stars"
-                        aria-hidden="true"
-                        loading="lazy"
-                        decoding="async"
-                        src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg"
-                        alt="stars"
-                        width="96"
-                        height="16"
+                        src="https://picsum.photos/id/238/400/300"
+                        alt="Almond Croissant"
+                        class="menu-item-image"
                     />
-                </li>
-                <!-- Review 2 -->
-                <li class="cs-item">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Almond Croissant</h3>
+                        <p class="menu-item-description">
+                            Buttery croissant filled with almond paste and
+                            topped with sliced almonds.
+                        </p>
+                        <p class="menu-item-price">$4.50</p>
+                    </div>
+                </div>
+
+                <!-- Menu Item 3 -->
+                <div class="menu-item" data-category="cakes">
                     <img
-                        class="cs-item-img"
-                        aria-hidden="true"
-                        loading="lazy"
-                        decoding="async"
-                        src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile-4.png"
-                        alt="profile picture"
-                        width="80"
-                        height="80"
+                        src="https://picsum.photos/id/239/400/300"
+                        alt="Chocolate Cake"
+                        class="menu-item-image"
                     />
-                    <p class="cs-item-p">
-                        Dictum dolor, nullam morbi sem in auctor proin.
-                        Consequat dolor habitasse nam sed tempor. Viverra magna
-                        pharetra rhoncus, nec sed ullamcorper lectus et. Auctor
-                        velit diam fermentum consequat. Feugiat viverra massa
-                        urna, volutpat orci imperdiet eget eget.
-                    </p>
-                    <span class="cs-reviewer">
-                        Jane Doe
-                        <span class="cs-desc">Homeowner</span>
-                    </span>
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Decadent Chocolate Cake</h3>
+                        <p class="menu-item-description">
+                            Rich chocolate cake with chocolate buttercream
+                            frosting.
+                        </p>
+                        <p class="menu-item-price">$35.00</p>
+                    </div>
+                </div>
+
+                <!-- Menu Item 4 -->
+                <div class="menu-item" data-category="cookies">
                     <img
-                        class="cs-item-stars"
-                        aria-hidden="true"
-                        loading="lazy"
-                        decoding="async"
-                        src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg"
-                        alt="stars"
-                        width="96"
-                        height="16"
+                        src="https://picsum.photos/id/240/400/300"
+                        alt="Chocolate Chip Cookies"
+                        class="menu-item-image"
                     />
-                </li>
-            </ul>
-            <a
-                aria-label="read more reviews"
-                href="/reviews"
-                class="cs-button-solid"
-                >Our Reviews</a
-            >
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Chocolate Chip Cookies</h3>
+                        <p class="menu-item-description">
+                            Classic chocolate chip cookies, soft and chewy.
+                        </p>
+                        <p class="menu-item-price">$2.50</p>
+                    </div>
+                </div>
+
+                <!-- Menu Item 5 -->
+                <div class="menu-item" data-category="breads">
+                    <img
+                        src="https://picsum.photos/id/241/400/300"
+                        alt="Baguette"
+                        class="menu-item-image"
+                    />
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">French Baguette</h3>
+                        <p class="menu-item-description">
+                            Long, thin loaf with a crisp crust and airy
+                            interior.
+                        </p>
+                        <p class="menu-item-price">$5.00</p>
+                    </div>
+                </div>
+
+                <!-- Menu Item 6 -->
+                <div class="menu-item" data-category="pastries">
+                    <img
+                        src="https://picsum.photos/id/242/400/300"
+                        alt="Pain au Chocolat"
+                        class="menu-item-image"
+                    />
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Pain au Chocolat</h3>
+                        <p class="menu-item-description">
+                            Flaky pastry with dark chocolate batons.
+                        </p>
+                        <p class="menu-item-price">$4.75</p>
+                    </div>
+                </div>
+
+                <!-- Menu Item 7 -->
+                <div class="menu-item" data-category="cakes">
+                    <img
+                        src="https://picsum.photos/id/243/400/300"
+                        alt="Vanilla Cake"
+                        class="menu-item-image"
+                    />
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Classic Vanilla Cake</h3>
+                        <p class="menu-item-description">
+                            Moist vanilla cake with vanilla buttercream
+                            frosting.
+                        </p>
+                        <p class="menu-item-price">$30.00</p>
+                    </div>
+                </div>
+
+                <!-- Menu Item 8 -->
+                <div class="menu-item" data-category="cookies">
+                    <img
+                        src="https://picsum.photos/id/244/400/300"
+                        alt="Oatmeal Raisin Cookies"
+                        class="menu-item-image"
+                    />
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Oatmeal Raisin Cookies</h3>
+                        <p class="menu-item-description">
+                            Chewy oatmeal cookies with plump raisins.
+                        </p>
+                        <p class="menu-item-price">$2.75</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    {% include 'components/cta.html' %}
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Bakery Gallery</h2>
+            <p class="section-description">
+                A glimpse into our bakery and the handcrafted goodness we create
+                every day.
+            </p>
+
+            <div class="gallery-grid">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item">
+                    <img
+                        src="https://picsum.photos/id/300/400/400"
+                        alt="Bakery Image 1"
+                        class="gallery-image"
+                    />
+                </div>
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item">
+                    <img
+                        src="https://picsum.photos/id/301/400/400"
+                        alt="Bakery Image 2"
+                        class="gallery-image"
+                    />
+                </div>
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item">
+                    <img
+                        src="https://picsum.photos/id/302/400/400"
+                        alt="Bakery Image 3"
+                        class="gallery-image"
+                    />
+                </div>
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item">
+                    <img
+                        src="https://picsum.photos/id/303/400/400"
+                        alt="Bakery Image 4"
+                        class="gallery-image"
+                    />
+                </div>
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item">
+                    <img
+                        src="https://picsum.photos/id/304/400/400"
+                        alt="Bakery Image 5"
+                        class="gallery-image"
+                    />
+                </div>
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item">
+                    <img
+                        src="https://picsum.photos/id/305/400/400"
+                        alt="Bakery Image 6"
+                        class="gallery-image"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <p class="section-description">
+                Hear from those who've experienced our handcrafted delights
+            </p>
+
+            <div class="testimonial-carousel">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card active">
+                    <img
+                        src="https://picsum.photos/id/64/100/100"
+                        alt="Sarah Johnson"
+                        class="testimonial-image"
+                    />
+                    <blockquote class="testimonial-text">
+                        "The Crooked Spoon's sourdough is simply unmatched. It's
+                        become a staple in our home!"
+                    </blockquote>
+                    <p class="testimonial-author">Sarah Johnson</p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <img
+                        src="https://picsum.photos/id/62/100/100"
+                        alt="Mike Thompson"
+                        class="testimonial-image"
+                    />
+                    <blockquote class="testimonial-text">
+                        "Their custom cakes are works of art. The buttercream
+                        flowers looked too beautiful to eat!"
+                    </blockquote>
+                    <p class="testimonial-author">Mike Thompson</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <img
+                        src="https://picsum.photos/id/66/100/100"
+                        alt="Emily Davis"
+                        class="testimonial-image"
+                    />
+                    <blockquote class="testimonial-text">
+                        "The croissants are heavenly - perfectly flaky and
+                        buttery. A true taste of Paris in Vermont!"
+                    </blockquote>
+                    <p class="testimonial-author">Emily Davis</p>
+                </div>
+            </div>
+
+            <div class="carousel-controls">
+                <button
+                    class="carousel-control prev"
+                    aria-label="Previous testimonial"
+                >
+                    <
+                </button>
+                <button
+                    class="carousel-control next"
+                    aria-label="Next testimonial"
+                >
+                    >
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="our-story">
+        <div class="container">
+            <div class="story-content">
+                <h2 class="section-title">Our Story</h2>
+                <p class="story-text">
+                    Founded in 2015 by former graphic designer Ellie Vance, The
+                    Crooked Spoon Bakery began as a passion project in a small
+                    Oakhaven kitchen. Our commitment to handcrafted quality and
+                    local ingredients quickly earned us a devoted following.
+                </p>
+                <p class="story-text">
+                    Today, we continue to blend artisanal techniques with
+                    creative flair, bringing a touch of whimsy to every loaf,
+                    pastry, and cake we create.
+                </p>
+                <a href="#about" class="read-more-btn">Read More About Us</a>
+            </div>
+            <div class="story-image">
+                <img
+                    src="https://picsum.photos/id/431/600/400"
+                    alt="Ellie Vance working in The Crooked Spoon Bakery"
+                    class="founder-image"
+                />
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <script src="./assets/js/main.js"></script>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>The Crooked Spoon Bakery</h3>
+                    <p>Handcrafted Happiness in Every Bite</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#menu">Our Menu</a></li>
+                        <li><a href="#order">Order Online</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>123 Main Street, Oakhaven, Vermont</p>
+                    <p>Phone: (555) 123-4567</p>
+                    <p>Email: hello@crookedspoonbakery.com</p>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"
+                            ><i class="fab fa-facebook-f"></i
+                        ></a>
+                        <a href="#" aria-label="Instagram"
+                            ><i class="fab fa-instagram"></i
+                        ></a>
+                        <a href="#" aria-label="Twitter"
+                            ><i class="fab fa-twitter"></i
+                        ></a>
+                        <a href="#" aria-label="Pinterest"
+                            ><i class="fab fa-pinterest-p"></i
+                        ></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2023 The Crooked Spoon Bakery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 {% endblock %}
